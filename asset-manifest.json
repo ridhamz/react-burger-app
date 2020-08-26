@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-burger-app/static/css/main.60293342.chunk.css",
+    "main.js": "/react-burger-app/static/js/main.a778fccd.chunk.js",
+    "main.js.map": "/react-burger-app/static/js/main.a778fccd.chunk.js.map",
+    "runtime-main.js": "/react-burger-app/static/js/runtime-main.8f04002e.js",
+    "runtime-main.js.map": "/react-burger-app/static/js/runtime-main.8f04002e.js.map",
+    "static/js/2.fecd6234.chunk.js": "/react-burger-app/static/js/2.fecd6234.chunk.js",
+    "static/js/2.fecd6234.chunk.js.map": "/react-burger-app/static/js/2.fecd6234.chunk.js.map",
+    "index.html": "/react-burger-app/index.html",
+    "precache-manifest.0003479041bd2f189a07e9e75e62ad68.js": "/react-burger-app/precache-manifest.0003479041bd2f189a07e9e75e62ad68.js",
+    "service-worker.js": "/react-burger-app/service-worker.js",
+    "static/css/main.60293342.chunk.css.map": "/react-burger-app/static/css/main.60293342.chunk.css.map",
+    "static/js/2.fecd6234.chunk.js.LICENSE.txt": "/react-burger-app/static/js/2.fecd6234.chunk.js.LICENSE.txt",
+    "static/media/burger-logo.png": "/react-burger-app/static/media/burger-logo.b8503d26.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f04002e.js",
+    "static/js/2.fecd6234.chunk.js",
+    "static/css/main.60293342.chunk.css",
+    "static/js/main.a778fccd.chunk.js"
+  ]
+}
