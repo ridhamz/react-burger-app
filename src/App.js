@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, withRouter, Switch, Redirect } from 'react-router-dom';
+import Layout from './hoc/layout/layout';
+import BurgerBuild from './containers/BurgerBuilder/burgerBuilder';
+import Checkout from './containers/checkout/checkout';
+import Orders from './containers/orders/orders';
+import Auth from './containers/auth/auth';
+import Logout from './containers/auth/logout/logout';
+import { connect } from 'react-redux';
 
-function App() {
+function App(props) {
+  let routes = (
+    <Switch>
+      <Route path='/auth' component={Auth} />
+      <Route exact path='/' component={BurgerBuild} />
+      <Redirect to='/' />
+    </Switch>
+  )
+  if (props.isAuthenticated) {
+    routes = (
+      <Switch>
+        <Route path='/checkout' component={Checkout} />
+        <Route path='/orders' component={Orders} />
+        <Route path='/logout' component={Logout} />
+        <Route path='/' exact component={BurgerBuild} />
+        <Redirect to='/' />
+      </Switch>
+    )
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Layout>
+        {routes}
+      </Layout>
     </div>
   );
 }
 
-export default App;
+const mapSateToPtrops = state => {
+  return {
+    isAuthenticated: state.auth.token !== null
+  }
+}
+
+export default withRouter(connect(mapSateToPtrops)(App));
